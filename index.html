@@ -1,0 +1,898 @@
+<!doctype html>
+<html lang="zh-CN">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>凡奇社媒 FANCHI Social Media｜品牌策略驱动的整合营销机构</title>
+    <meta name="description" content="凡奇社媒是广州凡奇创意广告有限公司旗下研究型业务板块，面向城市文旅、科技企业品牌战略咨询、行业观察者 IP 与数字事件营销，提供从品牌定位到内容传播落地的全链路服务。">
+    <meta name="keywords" content="凡奇社媒,FANCHI,广州凡奇创意广告有限公司,城市品牌营销,品牌策略咨询,科技企业品牌战略,企业家IP,数字事件营销">
+    <link rel="canonical" href="https://socialmedia-fanchi.com/">
+    <meta property="og:type" content="website">
+    <meta property="og:title" content="凡奇社媒｜品牌策略驱动的整合营销机构">
+    <meta property="og:description" content="从品牌战略定位到内容、视频、设计、事件传播落地，帮助城市、产业与企业被更准确地理解。">
+    <meta property="og:url" content="https://socialmedia-fanchi.com/">
+    <meta property="og:image" content="https://socialmedia-fanchi.com/assets/cases/hero-brand.jpg">
+    <style>
+      :root {
+        color-scheme: light;
+        --ink: #111111;
+        --muted: #666b73;
+        --paper: #f4f1ea;
+        --panel: #ffffff;
+        --line: #ded8cf;
+        --black: #090909;
+        --red: #d83026;
+        --teal: #147a82;
+        --gold: #b58a3d;
+        --soft: #ebe5da;
+      }
+
+      * {
+        box-sizing: border-box;
+      }
+
+      html {
+        scroll-behavior: smooth;
+      }
+
+      body {
+        margin: 0;
+        color: var(--ink);
+        background: var(--paper);
+        font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "PingFang SC", "Microsoft YaHei", Arial, sans-serif;
+        line-height: 1.72;
+        letter-spacing: 0;
+      }
+
+      img {
+        display: block;
+        width: 100%;
+        height: auto;
+      }
+
+      a {
+        color: inherit;
+        text-decoration: none;
+      }
+
+      .topbar {
+        position: sticky;
+        top: 0;
+        z-index: 20;
+        background: rgba(244, 241, 234, 0.9);
+        border-bottom: 1px solid rgba(17, 17, 17, 0.12);
+        backdrop-filter: blur(18px);
+      }
+
+      .nav {
+        width: min(1240px, calc(100% - 40px));
+        min-height: 70px;
+        margin: 0 auto;
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        gap: 28px;
+      }
+
+      .brand {
+        display: inline-flex;
+        align-items: center;
+      }
+
+      .brand img {
+        width: 150px;
+      }
+
+      .links {
+        display: flex;
+        align-items: center;
+        gap: 24px;
+        color: #383838;
+        font-size: 14px;
+        font-weight: 700;
+      }
+
+      .links a {
+        padding: 8px 0;
+      }
+
+      .links a:hover {
+        color: var(--red);
+      }
+
+      .nav-cta {
+        min-height: 38px;
+        display: inline-flex;
+        align-items: center;
+        justify-content: center;
+        padding: 0 14px;
+        border: 1px solid var(--black);
+        border-radius: 4px;
+        color: var(--black);
+      }
+
+      .hero {
+        position: relative;
+        min-height: 88vh;
+        display: grid;
+        align-items: end;
+        overflow: hidden;
+        background: var(--black);
+      }
+
+      .hero > img {
+        position: absolute;
+        inset: 0;
+        height: 100%;
+        object-fit: cover;
+        opacity: 0.72;
+        filter: saturate(0.94) contrast(1.06);
+      }
+
+      .hero::before {
+        content: "";
+        position: absolute;
+        inset: 0;
+        background:
+          linear-gradient(90deg, rgba(7, 7, 7, 0.92) 0%, rgba(7, 7, 7, 0.55) 50%, rgba(7, 7, 7, 0.14) 100%),
+          linear-gradient(180deg, rgba(7, 7, 7, 0.18) 0%, rgba(7, 7, 7, 0.84) 100%);
+      }
+
+      .hero-inner {
+        position: relative;
+        z-index: 1;
+        width: min(1240px, calc(100% - 40px));
+        margin: 0 auto;
+        padding: 110px 0 82px;
+        color: #ffffff;
+      }
+
+      .kicker {
+        margin: 0 0 16px;
+        color: #f06a5f;
+        font-size: 13px;
+        font-weight: 850;
+        letter-spacing: 0;
+        text-transform: uppercase;
+      }
+
+      h1,
+      h2,
+      h3 {
+        margin: 0;
+        line-height: 1.18;
+        letter-spacing: 0;
+      }
+
+      h1 {
+        max-width: 980px;
+        font-size: clamp(40px, 6.5vw, 86px);
+        font-weight: 900;
+      }
+
+      h2 {
+        font-size: clamp(29px, 3.7vw, 52px);
+        font-weight: 900;
+      }
+
+      h3 {
+        font-size: 22px;
+        font-weight: 850;
+      }
+
+      p {
+        margin: 0;
+      }
+
+      .hero-copy {
+        max-width: 780px;
+        margin-top: 24px;
+        color: rgba(255, 255, 255, 0.86);
+        font-size: clamp(17px, 2vw, 22px);
+      }
+
+      .hero-actions {
+        display: flex;
+        flex-wrap: wrap;
+        gap: 12px;
+        margin-top: 34px;
+      }
+
+      .button {
+        min-height: 46px;
+        display: inline-flex;
+        align-items: center;
+        justify-content: center;
+        padding: 0 18px;
+        border: 1px solid rgba(255, 255, 255, 0.56);
+        border-radius: 4px;
+        color: #ffffff;
+        font-weight: 800;
+        background: rgba(255, 255, 255, 0.08);
+      }
+
+      .button.primary {
+        border-color: #ffffff;
+        color: #111111;
+        background: #ffffff;
+      }
+
+      main {
+        overflow: hidden;
+      }
+
+      section {
+        padding: 84px 0;
+        border-bottom: 1px solid var(--line);
+      }
+
+      .wrap {
+        width: min(1240px, calc(100% - 40px));
+        margin: 0 auto;
+      }
+
+      .facts {
+        display: grid;
+        grid-template-columns: repeat(4, 1fr);
+        gap: 1px;
+        background: var(--black);
+        border: 1px solid var(--black);
+      }
+
+      .fact {
+        min-height: 142px;
+        padding: 24px;
+        background: var(--paper);
+      }
+
+      .fact span {
+        display: block;
+        color: var(--muted);
+        font-size: 13px;
+        font-weight: 800;
+      }
+
+      .fact b {
+        display: block;
+        margin-top: 12px;
+        font-size: 25px;
+        line-height: 1.25;
+      }
+
+      .section-head {
+        display: grid;
+        grid-template-columns: minmax(0, 0.95fr) minmax(300px, 1.05fr);
+        gap: 56px;
+        align-items: end;
+        margin-bottom: 42px;
+      }
+
+      .section-head p,
+      .lead {
+        color: var(--muted);
+        font-size: 18px;
+      }
+
+      .split {
+        display: grid;
+        grid-template-columns: minmax(0, 0.9fr) minmax(0, 1.1fr);
+        gap: 60px;
+        align-items: center;
+      }
+
+      .body-copy {
+        display: grid;
+        gap: 18px;
+        color: #32363b;
+        font-size: 18px;
+      }
+
+      .image-panel {
+        position: relative;
+        min-height: 440px;
+        overflow: hidden;
+        background: var(--black);
+      }
+
+      .image-panel img {
+        height: 100%;
+        min-height: 440px;
+        object-fit: cover;
+        opacity: 0.88;
+      }
+
+      .image-panel figcaption {
+        position: absolute;
+        left: 22px;
+        right: 22px;
+        bottom: 18px;
+        color: rgba(255, 255, 255, 0.86);
+        font-size: 13px;
+        font-weight: 750;
+      }
+
+      .services {
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+        gap: 18px;
+      }
+
+      .service,
+      .case,
+      .person {
+        background: var(--panel);
+        border: 1px solid var(--line);
+        border-radius: 6px;
+        overflow: hidden;
+      }
+
+      .service {
+        min-height: 280px;
+        padding: 28px;
+      }
+
+      .service small,
+      .case small,
+      .person small {
+        display: inline-block;
+        margin-bottom: 12px;
+        color: var(--red);
+        font-size: 12px;
+        font-weight: 900;
+        text-transform: uppercase;
+      }
+
+      .service p,
+      .case p,
+      .person p {
+        margin-top: 12px;
+        color: var(--muted);
+      }
+
+      .service-list {
+        margin: 18px 0 0;
+        padding-left: 18px;
+        color: #4a4f56;
+      }
+
+      .service-list li {
+        margin: 7px 0;
+      }
+
+      .dark {
+        color: #ffffff;
+        background: var(--black);
+      }
+
+      .dark .section-head p,
+      .dark .lead {
+        color: rgba(255, 255, 255, 0.68);
+      }
+
+      .method {
+        display: grid;
+        grid-template-columns: repeat(4, 1fr);
+        gap: 1px;
+        background: rgba(255, 255, 255, 0.22);
+        border: 1px solid rgba(255, 255, 255, 0.22);
+      }
+
+      .method-item {
+        min-height: 220px;
+        padding: 28px;
+        background: rgba(255, 255, 255, 0.08);
+      }
+
+      .method-item b {
+        display: block;
+        margin-bottom: 14px;
+        font-size: 24px;
+      }
+
+      .method-item p {
+        color: rgba(255, 255, 255, 0.74);
+      }
+
+      .case-grid {
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+        gap: 18px;
+      }
+
+      .case img,
+      .case .placeholder {
+        aspect-ratio: 16 / 10;
+        object-fit: cover;
+        background: #d9d2c6;
+      }
+
+      .case-body {
+        padding: 22px;
+      }
+
+      .case ul {
+        margin: 15px 0 0;
+        padding-left: 18px;
+        color: var(--muted);
+      }
+
+      .case li {
+        margin: 5px 0;
+      }
+
+      .placeholder {
+        display: grid;
+        place-items: center;
+        min-height: 230px;
+        color: #68645d;
+        font-weight: 850;
+      }
+
+      .dark .case {
+        background: rgba(255, 255, 255, 0.08);
+        border-color: rgba(255, 255, 255, 0.18);
+      }
+
+      .dark .case p,
+      .dark .case ul {
+        color: rgba(255, 255, 255, 0.7);
+      }
+
+      .people {
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        gap: 18px;
+      }
+
+      .person img {
+        aspect-ratio: 4 / 3;
+        object-fit: cover;
+        background: #ddd6cb;
+      }
+
+      .person-body {
+        padding: 26px;
+      }
+
+      .tags {
+        display: flex;
+        flex-wrap: wrap;
+        gap: 9px;
+        margin-top: 22px;
+      }
+
+      .tag {
+        border: 1px solid #cfc6ba;
+        border-radius: 999px;
+        padding: 7px 12px;
+        color: #47423d;
+        background: rgba(255, 255, 255, 0.44);
+        font-size: 13px;
+        font-weight: 750;
+      }
+
+      .contact {
+        display: grid;
+        grid-template-columns: minmax(0, 1fr) 430px;
+        gap: 54px;
+        align-items: center;
+      }
+
+      .contact-panel {
+        border: 1px solid var(--black);
+        background: var(--panel);
+        padding: 34px;
+        border-radius: 6px;
+      }
+
+      .tel {
+        display: inline-block;
+        margin-top: 22px;
+        color: var(--red);
+        font-size: clamp(28px, 4vw, 42px);
+        font-weight: 900;
+        line-height: 1;
+      }
+
+      .contact-panel p {
+        margin-top: 16px;
+        color: var(--muted);
+      }
+
+      footer {
+        padding: 30px 0;
+        color: var(--muted);
+        font-size: 14px;
+      }
+
+      footer .wrap {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: space-between;
+        gap: 14px;
+      }
+
+      @media (max-width: 980px) {
+        .links {
+          display: none;
+        }
+
+        .facts,
+        .services,
+        .method,
+        .case-grid,
+        .people {
+          grid-template-columns: 1fr;
+        }
+
+        .section-head,
+        .split,
+        .contact {
+          grid-template-columns: 1fr;
+          gap: 26px;
+        }
+
+        section {
+          padding: 64px 0;
+        }
+      }
+
+      @media (max-width: 560px) {
+        .nav,
+        .wrap,
+        .hero-inner {
+          width: min(100% - 28px, 1240px);
+        }
+
+        .brand img {
+          width: 120px;
+        }
+
+        .hero {
+          min-height: 82vh;
+        }
+
+        .hero-actions,
+        .button {
+          width: 100%;
+        }
+
+        .image-panel,
+        .image-panel img {
+          min-height: 300px;
+        }
+
+        .service,
+        .method-item,
+        .case-body,
+        .person-body,
+        .contact-panel {
+          padding: 22px;
+        }
+      }
+    </style>
+    <script type="application/ld+json">
+      {
+        "@context": "https://schema.org",
+        "@type": "Organization",
+        "name": "凡奇社媒",
+        "alternateName": ["FANCHI Social Media", "FANCHI", "新媒体 IP 事业中心"],
+        "legalName": "广州凡奇创意广告有限公司",
+        "url": "https://socialmedia-fanchi.com/",
+        "logo": "https://socialmedia-fanchi.com/assets/logo.png",
+        "description": "凡奇社媒是广州凡奇创意广告有限公司旗下，面向城市文旅、科技企业品牌战略咨询、行业观察者 IP 与整合传播落地的研究型业务板块。",
+        "foundingDate": "2016",
+        "areaServed": "全国",
+        "address": {
+          "@type": "PostalAddress",
+          "addressLocality": "广州",
+          "addressCountry": "CN"
+        },
+        "contactPoint": {
+          "@type": "ContactPoint",
+          "telephone": "13570351417",
+          "email": "armstrong@wholovestiktok.com",
+          "contactType": "business inquiries",
+          "areaServed": "全国",
+          "availableLanguage": ["zh-CN", "en"]
+        }
+      }
+    </script>
+  </head>
+  <body>
+    <div class="topbar">
+      <nav class="nav" aria-label="主导航">
+        <a class="brand" href="#top" aria-label="凡奇社媒首页">
+          <img src="assets/logo.png" alt="凡奇社媒 FANCHI">
+        </a>
+        <div class="links">
+          <a href="#positioning">定位</a>
+          <a href="#services">服务</a>
+          <a href="#cases">案例</a>
+          <a href="#team">团队</a>
+          <a class="nav-cta" href="#contact">联系</a>
+        </div>
+      </nav>
+    </div>
+
+    <header class="hero" id="top">
+      <img src="assets/cases/hero-brand.jpg" alt="凡奇社媒品牌项目现场">
+      <div class="hero-inner">
+        <p class="kicker">FANCHI SOCIAL MEDIA / BRAND STRATEGY & INTEGRATED COMMUNICATION</p>
+        <h1>凡奇社媒</h1>
+        <p class="hero-copy">以品牌策略为核心驱动的整合营销机构。我们帮助城市、产业、科技企业与公众人物，把复杂价值转化为清晰叙事、可见内容和持续传播资产。</p>
+        <div class="hero-actions">
+          <a class="button primary" href="#cases">查看项目案例</a>
+          <a class="button" href="tel:13570351417">电话咨询</a>
+          <a class="button" href="mailto:armstrong@wholovestiktok.com">邮件联系</a>
+        </div>
+      </div>
+    </header>
+
+    <main>
+      <section aria-label="品牌基础信息">
+        <div class="wrap">
+          <div class="facts">
+            <div class="fact">
+              <span>Company</span>
+              <b>广州凡奇创意广告有限公司</b>
+            </div>
+            <div class="fact">
+              <span>Since</span>
+              <b>2016 年</b>
+            </div>
+            <div class="fact">
+              <span>Based In</span>
+              <b>广州</b>
+            </div>
+            <div class="fact">
+              <span>Service Area</span>
+              <b>全国</b>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section id="positioning">
+        <div class="wrap split">
+          <div>
+            <p class="kicker">Company Positioning</p>
+            <h2>不是简单代运营，而是品牌研究与整合传播业务单元</h2>
+          </div>
+          <div class="body-copy">
+            <p>凡奇社媒是广州凡奇创意广告有限公司旗下，面向城市文旅与城市品牌战略、科技型企业品牌公关而专门成立的研究型业务板块。</p>
+            <p>凡奇广告作为公司主体，沉淀广告创意、品牌策略、活动执行和整合营销能力；凡奇社媒在此基础上聚焦更垂直的新传播课题：城市品牌如何被理解，科技企业如何被公众和产业市场识别，品牌策略如何转化为可传播内容。</p>
+            <p>我们的工作从品牌战略定位开始，系统梳理品牌屋、价值树、核心叙事框架和故事线，再承接新媒体内容、视频内容、广告设计、数字事件营销、线下活动策划和传播扩散。</p>
+          </div>
+        </div>
+      </section>
+
+      <section>
+        <div class="wrap split">
+          <figure class="image-panel">
+            <img src="assets/cases/shenzhen-yantian-flash.jpg" alt="深圳盐田海上丝绸之路音乐快闪">
+            <figcaption>城市文化、非遗表达、公共场景与新媒体传播的整合设计</figcaption>
+          </figure>
+          <div>
+            <p class="kicker">From Strategy To Visibility</p>
+            <h2>把看不见的战略，变成用户看得懂、记得住、愿意传播的内容</h2>
+            <p class="lead" style="margin-top: 20px;">我们不止交付一份策略文件，而是继续把策略推进到人物访谈、视频内容、视觉设计、公共事件与传播现场，让每一次表达都回到同一条品牌主线。</p>
+          </div>
+        </div>
+      </section>
+
+      <section id="services">
+        <div class="wrap">
+          <div class="section-head">
+            <div>
+              <p class="kicker">Service System</p>
+              <h2>从品牌战略到传播落地</h2>
+            </div>
+            <p>围绕品牌战略层、传播策略层和公关落地层，把企业价值、产业能力、城市资源和人物观点转化为完整的传播系统。</p>
+          </div>
+          <div class="services">
+            <article class="service">
+              <small>01 / Brand Strategy</small>
+              <h3>品牌策略咨询</h3>
+              <p>品牌定位与战略梳理、品牌屋与价值树构建、核心叙事框架与故事线策划。</p>
+              <ul class="service-list">
+                <li>品牌定位与形象诊断</li>
+                <li>企业价值观与口碑管理</li>
+                <li>故事线与核心叙事框架</li>
+              </ul>
+            </article>
+            <article class="service">
+              <small>02 / Content & Video</small>
+              <h3>新媒体内容交付</h3>
+              <p>短视频脚本策划、拍摄执行、后期剪辑与包装、社媒账号策略规划。</p>
+              <ul class="service-list">
+                <li>精品商业访谈</li>
+                <li>企业家 IP 视频</li>
+                <li>文化 IP 与短视频数字杂志</li>
+              </ul>
+            </article>
+            <article class="service">
+              <small>03 / Campaign & Event</small>
+              <h3>广告设计与数字事件营销</h3>
+              <p>平面广告设计、3D 视觉设计、文创产品设计、线上线下整合活动策划。</p>
+              <ul class="service-list">
+                <li>城市打卡内容打造</li>
+                <li>公关事件策划</li>
+                <li>网络传播扩散与复盘</li>
+              </ul>
+            </article>
+          </div>
+        </div>
+      </section>
+
+      <section class="dark">
+        <div class="wrap">
+          <div class="section-head">
+            <div>
+              <p class="kicker">Brand Story Methodology</p>
+              <h2>企业品牌故事线四步法</h2>
+            </div>
+            <p>从定位规划到全链路赋能，凡奇社媒用“视频流”和“事件化内容”把品牌战略接到真实传播现场。</p>
+          </div>
+          <div class="method">
+            <div class="method-item">
+              <b>定位规划</b>
+              <p>经营诊断、受众分析、成长策略，明确品牌与人物 IP 的核心识别。</p>
+            </div>
+            <div class="method-item">
+              <b>内容起盘</b>
+              <p>创始人访谈、脚本策划、专业拍摄，让真实故事变成可复用内容资产。</p>
+            </div>
+            <div class="method-item">
+              <b>运营管理</b>
+              <p>内容发布、粉丝互动、数据复盘，让传播进入长期沉淀。</p>
+            </div>
+            <div class="method-item">
+              <b>全链路赋能</b>
+              <p>视觉设计、事件策划、媒体公关，连接线上内容与线下场景。</p>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section id="cases">
+        <div class="wrap">
+          <div class="section-head">
+            <div>
+              <p class="kicker">Selected Cases</p>
+              <h2>城市文旅、科技企业与文化 IP 案例</h2>
+            </div>
+            <p>以下为已确认可公开的项目名称和方向。涉及项目成果数据、人物肖像、客户授权材料、视频画面和深度合作细节时，以最终确认版本为准。</p>
+          </div>
+          <div class="case-grid">
+            <article class="case">
+              <img src="assets/cases/maoming-dianbai.jpg" alt="茂名电白城市文旅事件营销">
+              <div class="case-body">
+                <small>City Branding</small>
+                <h3>茂名电白文旅事件营销</h3>
+                <p>围绕“千年电白，Young 养精彩”，整合城市旅游地图、永久打卡设施、临时艺术装置、网络话题策划与传播。</p>
+              </div>
+            </article>
+            <article class="case">
+              <img src="assets/cases/yangjiang-dongping-study.jpg" alt="阳江东平镇品牌诊断与大学生研学">
+              <div class="case-body">
+                <small>City Branding</small>
+                <h3>阳江东平镇品牌诊断和大学生研学</h3>
+                <p>围绕“海丝故里，浪漫东平”，推进城市品牌诊断、文旅体验官研学活动、文创物料和本地商家联动。</p>
+              </div>
+            </article>
+            <article class="case">
+              <img src="assets/cases/shenzhen-yantian-interview.jpg" alt="深圳盐田非遗文化快闪项目">
+              <div class="case-body">
+                <small>Cultural IP</small>
+                <h3><a href="/articles/ofw-009.html">深圳盐田非遗文化快闪项目</a></h3>
+                <p>整合南音、簪花围等传统元素，完成城市快闪、新媒体传播和公共文化场景表达。</p>
+              </div>
+            </article>
+            <article class="case">
+              <img src="assets/cases/nushu-cultural-ip.jpg" alt="湖南女书非遗与勾蓝瑶寨品牌策划">
+              <div class="case-body">
+                <small>Cultural IP</small>
+                <h3>湖南女书非遗和勾蓝瑶寨品牌策划项目</h3>
+                <p>围绕湖南女书非遗传播、勾蓝瑶寨品牌重塑和文旅品牌策划，让地方文化进入当代表达。</p>
+              </div>
+            </article>
+            <article class="case">
+              <img src="assets/cases/demart-product.png" alt="德玛特智能科技企业品牌战略咨询">
+              <div class="case-body">
+                <small>Technology Brand</small>
+                <h3>德玛特智能项目</h3>
+                <p>面向国家专精特新小巨人企业，围绕产品概念、技术内核和企业品牌故事线展开表达。</p>
+              </div>
+            </article>
+            <article class="case">
+              <img src="assets/cases/haina-interview.jpg" alt="海纳水产海洋牧场项目访谈">
+              <div class="case-body">
+                <small>Technology Brand</small>
+                <h3>海纳水产海洋牧场项目</h3>
+                <p>面向现代渔业科技与产业品牌，连接企业家访谈、产业价值梳理与品牌传播内容。</p>
+              </div>
+            </article>
+          </div>
+        </div>
+      </section>
+
+      <section class="dark">
+        <div class="wrap">
+          <div class="section-head">
+            <div>
+              <p class="kicker">Target Customers</p>
+              <h2>适合正在重新定义表达方式的组织</h2>
+            </div>
+            <p>城市文旅类品牌、新兴产业赛道成长型品牌、企业家与行业观察者 IP、非遗与乡村振兴项目，以及已有品牌策略但缺乏落地能力的组织。</p>
+          </div>
+          <div class="tags">
+            <span class="tag">城市文旅与区域品牌</span>
+            <span class="tag">科技型企业与新兴产业</span>
+            <span class="tag">企业家 IP</span>
+            <span class="tag">行业观察者 IP</span>
+            <span class="tag">文化 IP 与非遗传播</span>
+            <span class="tag">文创助农与乡村振兴</span>
+            <span class="tag">品牌策略落地</span>
+            <span class="tag">数字事件营销</span>
+          </div>
+        </div>
+      </section>
+
+      <section id="team">
+        <div class="wrap">
+          <div class="section-head">
+            <div>
+              <p class="kicker">Founders & Core Team</p>
+              <h2>创始人与核心顾问</h2>
+            </div>
+            <p>凡奇社媒由品牌战略、广告创意、事件营销、内容视频化和整合传播经验共同支撑。</p>
+          </div>
+          <div class="people">
+            <article class="person">
+              <img src="assets/cases/wang-yu.jpg" alt="王禹 Vincent W">
+              <div class="person-body">
+                <small>Founder / Brand Strategy Advisor</small>
+                <h3>王禹 Vincent W</h3>
+                <p>凡奇社媒创始人、品牌战略顾问、事件营销与新媒体营销孵化顾问。北京大学新兴产业企业家班研究员，暨南大学国际关系学院课外研究导师，中山大学工商管理学硕士，曾任 500 强企业营销创新板块负责人。</p>
+                <p>专业领域包括企业品牌故事线策略、城市品牌营销、新兴产业品牌研究、企业家 IP 与文化 IP 内容孵化。</p>
+              </div>
+            </article>
+            <article class="person">
+              <img src="assets/cases/yu-chungui.png" alt="余春桂">
+              <div class="person-body">
+                <small>Founder / Creative & Brand Advisor</small>
+                <h3>余春桂</h3>
+                <p>广州凡奇广告创始人、广州4A协会执委，拥有 20 年品牌实战经验，服务中大型央国企、上市公司 500+ 项目。</p>
+                <p>荣获当代中国品牌杰出青年才俊奖、广东省杰出广告人，担任麒麟奖、虎味奖、DMAA数字营销大奖、IMA移动营销大奖等国内广告奖项专家评委；同时担任广州从化流行音乐协会主席。</p>
+              </div>
+            </article>
+          </div>
+        </div>
+      </section>
+
+      <section id="contact">
+        <div class="wrap contact">
+          <div>
+            <p class="kicker">Contact</p>
+            <h2>把品牌策略变成真实可见的传播资产</h2>
+            <p class="lead" style="margin-top: 20px;">欢迎从城市文旅、科技企业品牌战略、企业家 IP、文化 IP 或整合传播项目开始沟通。</p>
+          </div>
+          <div class="contact-panel">
+            <h3>凡奇社媒</h3>
+            <p>品牌策略驱动的整合营销服务</p>
+            <a class="tel" href="tel:13570351417">13570351417</a>
+            <p>邮箱：<a href="mailto:armstrong@wholovestiktok.com">armstrong@wholovestiktok.com</a><br>官网：<a href="https://socialmedia-fanchi.com/">socialmedia-fanchi.com</a><br>公司主体：广州凡奇创意广告有限公司<br>所在城市：广州 / 服务地区：全国</p>
+          </div>
+        </div>
+      </section>
+    </main>
+
+    <footer>
+      <div class="wrap">
+        <span>© 凡奇社媒 / 广州凡奇创意广告有限公司</span>
+        <span>ICP备案号待补充。案例数据、人物肖像和客户授权材料以最终确认版本为准。</span>
+      </div>
+    </footer>
+  </body>
+</html>
