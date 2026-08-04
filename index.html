@@ -3,20 +3,21 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
-<meta name="description" content="凡奇社媒 · Social Media Fanchi — 社交媒体创意营销">
-<title>凡奇社媒 · FANCHI</title>
+<meta name="description" content="游渭南 — 发现渭南之美，上传你的精彩瞬间">
+<title>游渭南 · 发现渭南之美</title>
 <style>
   *, *::before, *::after { margin: 0; padding: 0; box-sizing: border-box; }
 
   :root {
-    --bg: #080810;
-    --card: #121220;
-    --accent: #7c6ff7;
-    --accent2: #00d4aa;
-    --accent-glow: rgba(124, 111, 247, 0.3);
-    --text: #eaeaf2;
-    --muted: #8888a8;
-    --border: #1e1e36;
+    --bg: #f7f8fc;
+    --card: #ffffff;
+    --primary: #e8734a;
+    --primary-dark: #d15a2e;
+    --accent: #3b8c6e;
+    --text: #2d2d3a;
+    --muted: #8a8a9a;
+    --border: #e8e8f0;
+    --shadow: 0 2px 16px rgba(0,0,0,0.06);
   }
 
   body {
@@ -24,131 +25,260 @@
     background: var(--bg);
     color: var(--text);
     min-height: 100vh;
+    overflow-x: hidden;
+    -webkit-font-smoothing: antialiased;
+  }
+
+  /* Hero Section */
+  .hero {
+    position: relative;
+    width: 100%;
+    min-height: 100vh;
     display: flex;
     flex-direction: column;
     align-items: center;
-    padding: 40px 16px 60px;
-    background-image:
-      radial-gradient(ellipse at 50% 0%, rgba(124, 111, 247, 0.08) 0%, transparent 60%),
-      radial-gradient(ellipse at 20% 80%, rgba(0, 212, 170, 0.05) 0%, transparent 50%);
-  }
-
-  /* Header */
-  .header {
-    text-align: center;
-    margin-bottom: 36px;
-  }
-  .logo-wrap {
-    width: 72px;
-    height: 72px;
-    background: linear-gradient(135deg, #7c6ff7, #a78bfa);
-    border-radius: 20px;
-    margin: 0 auto 14px;
-    display: flex;
-    align-items: center;
     justify-content: center;
-    font-size: 34px;
-    font-weight: 800;
-    color: #fff;
-    box-shadow: 0 8px 32px rgba(124, 111, 247, 0.3);
-    position: relative;
-  }
-  .logo-wrap::after {
-    content: '';
-    position: absolute;
-    inset: -4px;
-    border-radius: 24px;
-    background: linear-gradient(135deg, var(--accent), var(--accent2));
-    opacity: 0.15;
-    z-index: -1;
-  }
-  .brand-name {
-    font-size: 24px;
-    font-weight: 700;
-    letter-spacing: 3px;
-  }
-  .brand-sub {
-    font-size: 13px;
-    color: var(--muted);
-    margin-top: 4px;
-    letter-spacing: 2px;
-  }
-
-  /* Hero Card */
-  .hero {
-    width: 100%;
-    max-width: 420px;
-    background: var(--card);
-    border: 1px solid var(--border);
-    border-radius: 24px;
-    padding: 36px 24px;
     text-align: center;
-    position: relative;
+    padding: 60px 24px;
+    background: linear-gradient(180deg, #2c1810 0%, #5a3420 40%, #e8734a 70%, #f7f8fc 100%);
     overflow: hidden;
   }
   .hero::before {
     content: '';
     position: absolute;
-    top: 0; left: 0; right: 0;
-    height: 2px;
-    background: linear-gradient(90deg, transparent, var(--accent), var(--accent2), transparent);
+    inset: 0;
+    background:
+      radial-gradient(ellipse at 30% 20%, rgba(255,255,255,0.06) 0%, transparent 50%),
+      radial-gradient(ellipse at 70% 60%, rgba(255,255,255,0.04) 0%, transparent 50%);
   }
-  .badge {
+  .hero-mountain {
+    position: absolute;
+    bottom: 0; left: 0; right: 0;
+    height: 45%;
+    background:
+      linear-gradient(175deg, transparent 30%, rgba(255,255,255,0.05) 31%, transparent 33%),
+      linear-gradient(185deg, transparent 55%, rgba(255,255,255,0.04) 56%, transparent 58%);
+    clip-path: polygon(0% 100%, 0% 40%, 15% 55%, 30% 30%, 45% 50%, 60% 25%, 75% 45%, 90% 35%, 100% 55%, 100% 100%);
+  }
+  .hero-content {
+    position: relative;
+    z-index: 2;
+  }
+  .hero-tag {
     display: inline-block;
-    font-size: 12px;
+    font-size: 13px;
     font-weight: 600;
-    color: var(--accent2);
-    background: rgba(0, 212, 170, 0.1);
-    border: 1px solid rgba(0, 212, 170, 0.2);
-    padding: 5px 16px;
+    color: rgba(255,255,255,0.85);
+    background: rgba(255,255,255,0.12);
+    border: 1px solid rgba(255,255,255,0.2);
+    padding: 6px 20px;
     border-radius: 20px;
-    margin-bottom: 18px;
-    letter-spacing: 1px;
+    margin-bottom: 24px;
+    letter-spacing: 4px;
+    backdrop-filter: blur(10px);
   }
   .hero h1 {
-    font-size: 28px;
-    font-weight: 700;
-    margin-bottom: 10px;
-    line-height: 1.3;
+    font-size: 48px;
+    font-weight: 800;
+    color: #fff;
+    letter-spacing: 8px;
+    margin-bottom: 12px;
+    line-height: 1.2;
+    text-shadow: 0 2px 20px rgba(0,0,0,0.2);
   }
-  .hero-desc {
-    font-size: 15px;
-    color: var(--muted);
-    line-height: 1.7;
-    margin-bottom: 24px;
+  .hero-sub {
+    font-size: 16px;
+    color: rgba(255,255,255,0.7);
+    letter-spacing: 4px;
+    margin-bottom: 40px;
+  }
+  .hero-scroll {
+    position: absolute;
+    bottom: 30px;
+    left: 50%;
+    transform: translateX(-50%);
+    z-index: 2;
+    animation: bounce 2s infinite;
+  }
+  .hero-scroll span {
+    display: block;
+    width: 24px; height: 24px;
+    border-right: 2px solid rgba(255,255,255,0.4);
+    border-bottom: 2px solid rgba(255,255,255,0.4);
+    transform: rotate(45deg);
   }
 
-  /* Features */
-  .features {
-    display: flex;
-    flex-direction: column;
-    gap: 10px;
-    margin-bottom: 28px;
+  @keyframes bounce {
+    0%, 100% { transform: translateX(-50%) translateY(0); }
+    50% { transform: translateX(-50%) translateY(10px); }
+  }
+
+  /* Section Common */
+  .section {
+    padding: 60px 24px;
+    max-width: 480px;
+    margin: 0 auto;
+  }
+  .section-title {
+    font-size: 26px;
+    font-weight: 700;
+    text-align: center;
+    margin-bottom: 8px;
+    letter-spacing: 2px;
+  }
+  .section-sub {
+    font-size: 14px;
+    color: var(--muted);
+    text-align: center;
+    margin-bottom: 36px;
+    letter-spacing: 1px;
+  }
+
+  /* Intro Card */
+  .intro-card {
+    background: var(--card);
+    border-radius: 20px;
+    padding: 28px 24px;
+    box-shadow: var(--shadow);
+    margin-bottom: 16px;
+  }
+  .intro-card p {
+    font-size: 15px;
+    line-height: 1.8;
+    color: var(--muted);
+    text-align: center;
+  }
+  .intro-card .highlight {
+    color: var(--primary);
+    font-weight: 600;
+  }
+
+  /* Highlights */
+  .highlights {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 12px;
+    margin-bottom: 40px;
+  }
+  .hl-card {
+    background: var(--card);
+    border-radius: 16px;
+    padding: 20px 16px;
+    text-align: center;
+    box-shadow: var(--shadow);
+  }
+  .hl-icon {
+    font-size: 32px;
+    margin-bottom: 8px;
+  }
+  .hl-title {
+    font-size: 14px;
+    font-weight: 600;
+    margin-bottom: 4px;
+  }
+  .hl-desc {
+    font-size: 12px;
+    color: var(--muted);
+  }
+
+  /* Upload Section */
+  .upload-section {
+    background: var(--card);
+    border-radius: 20px;
+    padding: 32px 24px;
+    box-shadow: var(--shadow);
+    text-align: center;
+    margin-bottom: 16px;
+    border: 2px dashed var(--border);
+  }
+  .upload-icon {
+    font-size: 48px;
+    margin-bottom: 12px;
+  }
+  .upload-title {
+    font-size: 18px;
+    font-weight: 700;
+    margin-bottom: 6px;
+  }
+  .upload-desc {
+    font-size: 13px;
+    color: var(--muted);
+    margin-bottom: 20px;
+    line-height: 1.6;
+  }
+  .upload-hint {
+    font-size: 12px;
+    color: var(--muted);
+    margin-top: 12px;
+  }
+
+  /* Form Section */
+  .form-section {
+    background: var(--card);
+    border-radius: 20px;
+    padding: 32px 24px;
+    box-shadow: var(--shadow);
+  }
+  .form-group {
+    margin-bottom: 18px;
     text-align: left;
   }
-  .ft {
-    display: flex;
-    align-items: center;
-    gap: 12px;
+  .form-group label {
+    display: block;
     font-size: 14px;
-    padding: 10px 14px;
+    font-weight: 600;
+    margin-bottom: 6px;
+    color: var(--text);
+  }
+  .form-group label .required {
+    color: var(--primary);
+  }
+  .form-group input,
+  .form-group textarea,
+  .form-group select {
+    width: 100%;
+    padding: 12px 14px;
+    font-size: 15px;
+    border: 1px solid var(--border);
     border-radius: 12px;
-    background: rgba(255,255,255,0.02);
-    border: 1px solid transparent;
+    background: var(--bg);
+    color: var(--text);
+    font-family: inherit;
+    transition: border-color 0.2s;
+    outline: none;
+  }
+  .form-group input:focus,
+  .form-group textarea:focus {
+    border-color: var(--primary);
+  }
+  .form-group textarea {
+    min-height: 80px;
+    resize: vertical;
+  }
+  .file-upload-area {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 10px;
+    padding: 24px;
+    border: 2px dashed var(--border);
+    border-radius: 16px;
+    background: var(--bg);
+    cursor: pointer;
     transition: all 0.2s;
   }
-  .ft:hover { border-color: var(--border); }
-  .ft-icon {
-    width: 36px; height: 36px;
-    border-radius: 10px;
-    display: flex;
-    align-items: center; justify-content: center;
-    font-size: 18px;
-    flex-shrink: 0;
+  .file-upload-area:hover {
+    border-color: var(--primary);
+    background: rgba(232, 115, 74, 0.03);
   }
-  .ft-1 { background: rgba(124, 111, 247, 0.15); }
-  .ft-2 { background: rgba(0, 212, 170, 0.12); }
-  .ft-3 { background: rgba(255, 159, 67, 0.12); }
+  .file-upload-area input[type="file"] {
+    display: none;
+  }
+  .file-name {
+    font-size: 13px;
+    color: var(--accent);
+    margin-top: 4px;
+  }
 
   /* Buttons */
   .btn {
@@ -167,82 +297,221 @@
     font-family: inherit;
   }
   .btn-primary {
-    background: linear-gradient(135deg, var(--accent), #a78bfa);
+    background: linear-gradient(135deg, var(--primary), var(--primary-dark));
     color: #fff;
-    box-shadow: 0 6px 24px var(--accent-glow);
-    margin-bottom: 10px;
+    box-shadow: 0 6px 24px rgba(232, 115, 74, 0.3);
+    margin-top: 8px;
   }
   .btn-primary:hover, .btn-primary:active {
     transform: translateY(-2px);
-    box-shadow: 0 10px 32px var(--accent-glow);
+    box-shadow: 0 10px 32px rgba(232, 115, 74, 0.4);
   }
-  .btn-secondary {
+  .btn-outline {
     background: transparent;
-    color: var(--muted);
-    border: 1px solid var(--border);
+    color: var(--primary);
+    border: 1.5px solid var(--primary);
+    margin-top: 10px;
     font-weight: 500;
-  }
-  .btn-secondary:hover, .btn-secondary:active {
-    border-color: var(--accent);
-    color: var(--accent);
   }
 
   /* Footer */
   .footer {
-    margin-top: 32px;
+    text-align: center;
+    padding: 32px 24px;
     font-size: 12px;
     color: var(--muted);
-    text-align: center;
     line-height: 1.8;
   }
-  .footer a { color: var(--accent); text-decoration: none; }
+
+  /* Success Message */
+  .success-msg {
+    display: none;
+    text-align: center;
+    padding: 20px;
+  }
+  .success-msg.show { display: block; }
+  .success-msg .icon { font-size: 48px; margin-bottom: 12px; }
+  .success-msg .title { font-size: 18px; font-weight: 700; color: var(--accent); }
 
   /* Animation */
   @keyframes fadeUp {
-    from { opacity: 0; transform: translateY(24px); }
+    from { opacity: 0; transform: translateY(30px); }
     to { opacity: 1; transform: translateY(0); }
   }
-  .hero { animation: fadeUp 0.6s ease-out; }
-  .header { animation: fadeUp 0.5s ease-out; }
+  .fade-up { animation: fadeUp 0.8s ease-out both; }
+  .fade-up:nth-child(2) { animation-delay: 0.15s; }
+  .fade-up:nth-child(3) { animation-delay: 0.3s; }
 </style>
 </head>
 <body>
 
-<header class="header">
-  <div class="logo-wrap">F</div>
-  <div class="brand-name">凡奇社媒</div>
-  <div class="brand-sub">SOCIAL MEDIA · FANCHI</div>
-</header>
+<!-- ====== Hero ====== -->
+<section class="hero">
+  <div class="hero-mountain"></div>
+  <div class="hero-content">
+    <div class="hero-tag">陕 西 · 渭 南</div>
+    <h1>游 渭 南</h1>
+    <p class="hero-sub">发现山水渭南 · 记录旅途精彩</p>
+  </div>
+  <div class="hero-scroll"><span></span></div>
+</section>
 
-<main class="hero">
-  <span class="badge">✦ 创意活动</span>
-  <h1>上传你的作品<br>参与创意评选</h1>
-  <p class="hero-desc">拍摄你的精彩瞬间，上传作品并留下联系方式，即有机会获得专属展示与惊喜奖励。</p>
+<!-- ====== Intro ====== -->
+<section class="section fade-up">
+  <div class="intro-card">
+    <p>渭南，<span class="highlight">华山巍峨</span>耸立，<span class="highlight">黄河奔流</span>不息。</p>
+    <p>这里有千年古城的历史沉淀，也有秦岭山水的自然壮美。</p>
+    <p>现在就出发，用镜头记录你眼中的<span class="highlight">大美渭南</span>，上传作品参与评选，赢取专属旅游福利！</p>
+  </div>
+</section>
 
-  <div class="features">
-    <div class="ft">
-      <div class="ft-icon ft-1">📸</div>
-      <span>上传你的照片/视频作品</span>
+<!-- ====== Highlights ====== -->
+<section class="section fade-up">
+  <h2 class="section-title">旅途亮点</h2>
+  <p class="section-sub">发现渭南的独特魅力</p>
+  <div class="highlights">
+    <div class="hl-card">
+      <div class="hl-icon">⛰️</div>
+      <div class="hl-title">西岳华山</div>
+      <div class="hl-desc">奇险天下第一山</div>
     </div>
-    <div class="ft">
-      <div class="ft-icon ft-2">📝</div>
-      <span>填写联系方式，方便后续通知</span>
+    <div class="hl-card">
+      <div class="hl-icon">🏛️</div>
+      <div class="hl-title">千年古城</div>
+      <div class="hl-desc">韩城古城·党家村</div>
     </div>
-    <div class="ft">
-      <div class="ft-icon ft-3">🎁</div>
-      <span>入选作品将获得专属奖励</span>
+    <div class="hl-card">
+      <div class="hl-icon">🌊</div>
+      <div class="hl-title">黄河胜景</div>
+      <div class="hl-desc">洽川湿地·黄河魂</div>
+    </div>
+    <div class="hl-card">
+      <div class="hl-icon">🍜</div>
+      <div class="hl-title">渭南味道</div>
+      <div class="hl-desc">时辰包子·水盆羊肉</div>
     </div>
   </div>
+</section>
 
-  <!-- ⚠️ 将下面的 # 替换为实际的问卷星/金数据链接 -->
-  <a href="#" class="btn btn-primary" id="submitBtn">📤 立即上传参与</a>
-  <a href="#" class="btn btn-secondary">了解更多 →</a>
-</main>
+<!-- ====== Upload & Form ====== -->
+<section class="section fade-up" id="submitSection">
+  <h2 class="section-title">上传作品 · 参与评选</h2>
+  <p class="section-sub">分享你的渭南之旅</p>
 
+  <!-- 上传引导 -->
+  <div class="upload-section">
+    <div class="upload-icon">📸</div>
+    <div class="upload-title">上传你的渭南精彩瞬间</div>
+    <div class="upload-desc">照片、短视频均可，<br>风景、人文、美食不限题材</div>
+    <!-- 替换为实际的问卷星/金数据链接 -->
+    <a href="#" class="btn btn-primary" id="uploadLink">📤 前往上传作品</a>
+    <p class="upload-hint">点击后跳转至作品上传页面（问卷星）</p>
+  </div>
+
+  <!-- 联系方式表单 -->
+  <div class="form-section" style="margin-top:16px">
+    <h3 style="text-align:center;font-size:17px;font-weight:700;margin-bottom:20px">📝 留下联系方式</h3>
+    <form id="contactForm">
+      <div class="form-group">
+        <label>姓名 <span class="required">*</span></label>
+        <input type="text" id="name" placeholder="请输入你的姓名" required>
+      </div>
+      <div class="form-group">
+        <label>手机号 <span class="required">*</span></label>
+        <input type="tel" id="phone" placeholder="请输入手机号码" required maxlength="11">
+      </div>
+      <div class="form-group">
+        <label>微信/邮箱</label>
+        <input type="text" id="contact" placeholder="方便后续联系">
+      </div>
+      <div class="form-group">
+        <label>作品主题</label>
+        <select id="theme">
+          <option value="">请选择作品主题</option>
+          <option value="华山风光">华山风光</option>
+          <option value="古城人文">古城人文</option>
+          <option value="黄河湿地">黄河湿地</option>
+          <option value="城市新貌">城市新貌</option>
+          <option value="美食特产">美食特产</option>
+          <option value="其他">其他</option>
+        </select>
+      </div>
+      <div class="form-group">
+        <label>作品简介（选填）</label>
+        <textarea id="desc" placeholder="简单介绍你的作品…"></textarea>
+      </div>
+      <button type="submit" class="btn btn-primary">✅ 提交信息</button>
+      <p style="text-align:center;font-size:11px;color:var(--muted);margin-top:12px">提交后将跳转至作品上传页面</p>
+    </form>
+
+    <!-- 提交成功提示 -->
+    <div class="success-msg" id="successMsg">
+      <div class="icon">🎉</div>
+      <div class="title">信息提交成功！</div>
+      <p style="color:var(--muted);margin-top:8px;font-size:14px">请继续上传你的作品</p>
+      <a href="#" class="btn btn-outline" id="uploadAfterSubmit">📤 上传作品</a>
+    </div>
+  </div>
+</section>
+
+<!-- ====== Footer ====== -->
 <footer class="footer">
-  © 2026 凡奇社媒 · Social Media Fanchi<br>
+  © 2026 游渭南 · 发现渭南之美<br>
   扫码或访问 socialmedia-fanchi.com 参与活动
 </footer>
+
+<script>
+// 表单提交处理
+document.getElementById('contactForm').addEventListener('submit', function(e) {
+  e.preventDefault();
+
+  const name = document.getElementById('name').value.trim();
+  const phone = document.getElementById('phone').value.trim();
+
+  if (!name || !phone) {
+    alert('请填写姓名和手机号');
+    return;
+  }
+
+  if (!/^1[3-9]\d{9}$/.test(phone)) {
+    alert('请输入正确的手机号码');
+    return;
+  }
+
+  // 收集表单数据
+  const formData = {
+    name: name,
+    phone: phone,
+    contact: document.getElementById('contact').value.trim(),
+    theme: document.getElementById('theme').value,
+    desc: document.getElementById('desc').value.trim(),
+    timestamp: new Date().toISOString()
+  };
+
+  console.log('提交数据:', formData);
+
+  // 显示成功提示
+  document.getElementById('contactForm').style.display = 'none';
+  document.getElementById('successMsg').classList.add('show');
+
+  // ⚠️ 实际项目中，这里将数据发送到后端/问卷星
+  // 目前仅做前端展示，数据打印在控制台
+});
+
+// 文件上传预览
+const fileInput = document.getElementById('photo');
+const fileName = document.getElementById('fileName');
+if (fileInput) {
+  fileInput.addEventListener('change', function() {
+    if (this.files.length > 0) {
+      fileName.textContent = '已选择: ' + this.files[0].name;
+    }
+  });
+}
+
+// ⚠️ 替换下面所有 # 为实际的问卷星/金数据链接
+// 示例: document.getElementById('uploadLink').href = 'https://www.wjx.cn/vm/xxxxx.aspx';
+</script>
 
 </body>
 </html>
