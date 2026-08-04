@@ -1,1 +1,248 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+<meta name="description" content="凡奇社媒 · Social Media Fanchi — 社交媒体创意营销">
+<title>凡奇社媒 · FANCHI</title>
+<style>
+  *, *::before, *::after { margin: 0; padding: 0; box-sizing: border-box; }
 
+  :root {
+    --bg: #080810;
+    --card: #121220;
+    --accent: #7c6ff7;
+    --accent2: #00d4aa;
+    --accent-glow: rgba(124, 111, 247, 0.3);
+    --text: #eaeaf2;
+    --muted: #8888a8;
+    --border: #1e1e36;
+  }
+
+  body {
+    font-family: -apple-system, BlinkMacSystemFont, "PingFang SC", "Microsoft YaHei", "Helvetica Neue", sans-serif;
+    background: var(--bg);
+    color: var(--text);
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 40px 16px 60px;
+    background-image:
+      radial-gradient(ellipse at 50% 0%, rgba(124, 111, 247, 0.08) 0%, transparent 60%),
+      radial-gradient(ellipse at 20% 80%, rgba(0, 212, 170, 0.05) 0%, transparent 50%);
+  }
+
+  /* Header */
+  .header {
+    text-align: center;
+    margin-bottom: 36px;
+  }
+  .logo-wrap {
+    width: 72px;
+    height: 72px;
+    background: linear-gradient(135deg, #7c6ff7, #a78bfa);
+    border-radius: 20px;
+    margin: 0 auto 14px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 34px;
+    font-weight: 800;
+    color: #fff;
+    box-shadow: 0 8px 32px rgba(124, 111, 247, 0.3);
+    position: relative;
+  }
+  .logo-wrap::after {
+    content: '';
+    position: absolute;
+    inset: -4px;
+    border-radius: 24px;
+    background: linear-gradient(135deg, var(--accent), var(--accent2));
+    opacity: 0.15;
+    z-index: -1;
+  }
+  .brand-name {
+    font-size: 24px;
+    font-weight: 700;
+    letter-spacing: 3px;
+  }
+  .brand-sub {
+    font-size: 13px;
+    color: var(--muted);
+    margin-top: 4px;
+    letter-spacing: 2px;
+  }
+
+  /* Hero Card */
+  .hero {
+    width: 100%;
+    max-width: 420px;
+    background: var(--card);
+    border: 1px solid var(--border);
+    border-radius: 24px;
+    padding: 36px 24px;
+    text-align: center;
+    position: relative;
+    overflow: hidden;
+  }
+  .hero::before {
+    content: '';
+    position: absolute;
+    top: 0; left: 0; right: 0;
+    height: 2px;
+    background: linear-gradient(90deg, transparent, var(--accent), var(--accent2), transparent);
+  }
+  .badge {
+    display: inline-block;
+    font-size: 12px;
+    font-weight: 600;
+    color: var(--accent2);
+    background: rgba(0, 212, 170, 0.1);
+    border: 1px solid rgba(0, 212, 170, 0.2);
+    padding: 5px 16px;
+    border-radius: 20px;
+    margin-bottom: 18px;
+    letter-spacing: 1px;
+  }
+  .hero h1 {
+    font-size: 28px;
+    font-weight: 700;
+    margin-bottom: 10px;
+    line-height: 1.3;
+  }
+  .hero-desc {
+    font-size: 15px;
+    color: var(--muted);
+    line-height: 1.7;
+    margin-bottom: 24px;
+  }
+
+  /* Features */
+  .features {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    margin-bottom: 28px;
+    text-align: left;
+  }
+  .ft {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    font-size: 14px;
+    padding: 10px 14px;
+    border-radius: 12px;
+    background: rgba(255,255,255,0.02);
+    border: 1px solid transparent;
+    transition: all 0.2s;
+  }
+  .ft:hover { border-color: var(--border); }
+  .ft-icon {
+    width: 36px; height: 36px;
+    border-radius: 10px;
+    display: flex;
+    align-items: center; justify-content: center;
+    font-size: 18px;
+    flex-shrink: 0;
+  }
+  .ft-1 { background: rgba(124, 111, 247, 0.15); }
+  .ft-2 { background: rgba(0, 212, 170, 0.12); }
+  .ft-3 { background: rgba(255, 159, 67, 0.12); }
+
+  /* Buttons */
+  .btn {
+    display: block;
+    width: 100%;
+    padding: 15px;
+    font-size: 16px;
+    font-weight: 600;
+    border: none;
+    border-radius: 14px;
+    cursor: pointer;
+    letter-spacing: 1px;
+    transition: all 0.3s;
+    text-decoration: none;
+    text-align: center;
+    font-family: inherit;
+  }
+  .btn-primary {
+    background: linear-gradient(135deg, var(--accent), #a78bfa);
+    color: #fff;
+    box-shadow: 0 6px 24px var(--accent-glow);
+    margin-bottom: 10px;
+  }
+  .btn-primary:hover, .btn-primary:active {
+    transform: translateY(-2px);
+    box-shadow: 0 10px 32px var(--accent-glow);
+  }
+  .btn-secondary {
+    background: transparent;
+    color: var(--muted);
+    border: 1px solid var(--border);
+    font-weight: 500;
+  }
+  .btn-secondary:hover, .btn-secondary:active {
+    border-color: var(--accent);
+    color: var(--accent);
+  }
+
+  /* Footer */
+  .footer {
+    margin-top: 32px;
+    font-size: 12px;
+    color: var(--muted);
+    text-align: center;
+    line-height: 1.8;
+  }
+  .footer a { color: var(--accent); text-decoration: none; }
+
+  /* Animation */
+  @keyframes fadeUp {
+    from { opacity: 0; transform: translateY(24px); }
+    to { opacity: 1; transform: translateY(0); }
+  }
+  .hero { animation: fadeUp 0.6s ease-out; }
+  .header { animation: fadeUp 0.5s ease-out; }
+</style>
+</head>
+<body>
+
+<header class="header">
+  <div class="logo-wrap">F</div>
+  <div class="brand-name">凡奇社媒</div>
+  <div class="brand-sub">SOCIAL MEDIA · FANCHI</div>
+</header>
+
+<main class="hero">
+  <span class="badge">✦ 创意活动</span>
+  <h1>上传你的作品<br>参与创意评选</h1>
+  <p class="hero-desc">拍摄你的精彩瞬间，上传作品并留下联系方式，即有机会获得专属展示与惊喜奖励。</p>
+
+  <div class="features">
+    <div class="ft">
+      <div class="ft-icon ft-1">📸</div>
+      <span>上传你的照片/视频作品</span>
+    </div>
+    <div class="ft">
+      <div class="ft-icon ft-2">📝</div>
+      <span>填写联系方式，方便后续通知</span>
+    </div>
+    <div class="ft">
+      <div class="ft-icon ft-3">🎁</div>
+      <span>入选作品将获得专属奖励</span>
+    </div>
+  </div>
+
+  <!-- ⚠️ 将下面的 # 替换为实际的问卷星/金数据链接 -->
+  <a href="#" class="btn btn-primary" id="submitBtn">📤 立即上传参与</a>
+  <a href="#" class="btn btn-secondary">了解更多 →</a>
+</main>
+
+<footer class="footer">
+  © 2026 凡奇社媒 · Social Media Fanchi<br>
+  扫码或访问 socialmedia-fanchi.com 参与活动
+</footer>
+
+</body>
+</html>
